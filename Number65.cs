@@ -42,8 +42,8 @@ namespace Number65
             DateClass cDay2 = new DateClass();
             Console.WriteLine("cDay2 : {0}/{1}/{2}", cDay2.year, cDay2.month, cDay2.day); // cDay2: 0 / 0 / 0
 
-            DateStruct s = sDay;
-            DateClass c = cDay;
+            DateStruct s = sDay; // s는 값형인 구조체이므로 메모리 영역에 3개 필드를 저장할 수 있는 영역이 할당되고 값이 복사됨
+            DateClass c = cDay;  // c는 참조형인 클래스이므로 스택 영역에 참조만 만들어지고 cDay와 같은 힙 영역을 참조하게 됨
 
             s.year = 2000;
             c.year = 2000;
